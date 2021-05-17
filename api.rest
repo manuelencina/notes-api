@@ -1,0 +1,30 @@
+###
+GET http://localhost:4000/api/v1
+
+###
+GET http://localhost:4000/api/v1/57de3fe6-4a5f-4764-bf6d-a4e44777f12c
+
+###
+POST http://localhost:4000/api/v1
+Content-Type: application/json
+
+{
+    "title": "Api en Rust",
+    "state": "en proceso",
+    "description": "Terminar REST API en Rust"
+}
+
+###
+PUT http://localhost:4000/api/v1/8d5e0444-5187-41e8-9aba-ac26a234da79
+Content-Type: application/json
+
+{
+    "id": "8d5e0444-5187-41e8-9aba-ac26a234da79",
+    "state": "en proceso",
+    "title": "Tarea de Inglés",
+    "description": "Tarea de inglés terminada"
+}
+
+
+###
+DELETE http://localhost:4000/api/v1/9f1361f3-903c-48b6-b6d5-dcbc3a84d0c3
