@@ -38,18 +38,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getNotesFromJSONFIle = void 0;
 var fs_1 = require("fs");
-var path_1 = require("../path");
-var getNotesFromJSONFIle = function (path, enconding) { return __awaiter(void 0, void 0, void 0, function () {
-    var data, jsonFIle, jsonObject, error_1;
+var getNotesFromJSONFIle = function (path) { return __awaiter(void 0, void 0, void 0, function () {
+    var data, jsonFile, jsonObject, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 2, , 3]);
                 data = [];
-                return [4 /*yield*/, fs_1.promises.readFile(path_1.JSON_FILE_PATH, 'utf8')];
+                return [4 /*yield*/, fs_1.promises.readFile(path, 'utf8')];
             case 1:
-                jsonFIle = _a.sent();
-                jsonObject = JSON.parse(jsonFIle);
+                jsonFile = _a.sent();
+                jsonObject = JSON.parse(jsonFile);
                 data = jsonObject.data;
                 return [2 /*return*/, data];
             case 2:

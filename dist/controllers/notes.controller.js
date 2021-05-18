@@ -48,7 +48,7 @@ var getNotes = function (req, res) { return __awaiter(void 0, void 0, void 0, fu
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 2, , 3]);
-                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH, path_1.ENCODING)];
+                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH)];
             case 1:
                 notes = _a.sent();
                 res.json(notes);
@@ -71,7 +71,7 @@ var getNoteById = function (req, res) { return __awaiter(void 0, void 0, void 0,
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 2, , 3]);
-                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH, path_1.ENCODING)];
+                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH)];
             case 1:
                 notes = _a.sent();
                 note = notes.find(function (d) { return d.id === req.params.id; });
@@ -98,7 +98,7 @@ var createNote = function (req, res) { return __awaiter(void 0, void 0, void 0, 
             case 0:
                 _a.trys.push([0, 3, , 4]);
                 newNote = req.body;
-                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH, path_1.ENCODING)];
+                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH)];
             case 1:
                 notes = _a.sent();
                 addNote_1.addNote(notes, newNote);
@@ -129,7 +129,7 @@ var editNote = function (req, res) { return __awaiter(void 0, void 0, void 0, fu
             case 0:
                 _a.trys.push([0, 3, , 4]);
                 updatedNode = void 0;
-                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH, path_1.ENCODING)];
+                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH)];
             case 1:
                 notes = _a.sent();
                 notes = notes.filter(function (d) { return d.id !== req.params.id; });
@@ -161,7 +161,7 @@ var deleteNote = function (req, res) { return __awaiter(void 0, void 0, void 0, 
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 3, , 4]);
-                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH, path_1.ENCODING)];
+                return [4 /*yield*/, storage_helpers_1.getNotesFromJSONFIle(path_1.JSON_FILE_PATH)];
             case 1:
                 data = _a.sent();
                 data = data.filter(function (d) { return d.id !== req.params.id; });
